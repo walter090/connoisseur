@@ -17,7 +17,7 @@ def create_metadata(dataset_dir, out='metadata'):
     with open(os.path.join(out, 'composer_map.tsv'), 'w') as writer:
         for composer, files in composer_map.items():
             for file in files:
-                writer.write(composer + '   ' + file + '\n')
+                writer.write('{0}    {1}'.format(composer, file))
 
 
 if __name__ == '__main__':
